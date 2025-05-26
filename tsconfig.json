@@ -1,0 +1,19 @@
+{
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.node.json" }
+	],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			// "nkt-ui": ["./dist"],
+			// "nkt-ui/*": ["./dist/*"],
+			"@/*": ["lib/*"],
+			"@components/*": ["lib/components/*"],
+			"@hooks/*": ["lib/hooks/*"],
+			"@utils/*": ["lib/utils/*"],
+			"@theme/*": ["lib/theme/*"]
+		}
+	}
+}

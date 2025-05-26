@@ -1,0 +1,137 @@
+.button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	border: none;
+	--border-radius: 0.6rem;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	text-align: center;
+	background-color: var(--btn-bg, #007bff);
+	color: var(--btn-color, #fff);
+	--hover-brightness: 1.2;
+	filter: brightness(var(--hover-brightness));
+	transition: backgrond-color 0.3s ease, color 0.3s ease, filter 0.2s ease;
+}
+.button:hover {
+	--hover-brightness: 1;
+}
+
+.button:active {
+	--hover-brightness: 0.8;
+}
+
+.button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.button.default {
+	--btn-bg: #f8f9fa;
+	--btn-color: #212529;
+}
+
+.button.ghost {
+	filter: brightness(1);
+	--btn-bg: rgba(0, 0, 0, 0);
+	transition: background-color 0.3s ease;
+}
+
+.button.ghost:hover {
+	--btn-bg: rgba(0, 0, 0, 0.1);
+}
+
+.button.ghost:active {
+	--btn-bg: rgba(0, 0, 0, 0.2);
+}
+
+.button.primary {
+	--btn-bg: #007bff;
+}
+
+.button.secondary {
+	--btn-bg: #000000;
+}
+
+.button.danger {
+	--btn-bg: #dc3545;
+}
+
+.button.success {
+	--btn-bg: #28a745;
+}
+
+.button.warning {
+	--btn-bg: #ffc107;
+	--btn-color: #212529;
+}
+
+.sm {
+	font-size: 0.875rem;
+	padding: 0.25rem 0.5rem;
+	--spinner-size: 1rem;
+}
+
+.md {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	--spinner-size: 1.5rem;
+}
+
+.lg {
+	font-size: 1.25rem;
+	padding: 0.75rem 1.5rem;
+	--spinner-size: 2rem;
+}
+
+.iconGap {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.button.icon {
+	--border-radius: 999px;
+	padding: 0.5rem;
+}
+
+.button.loading .contentWrapper {
+	visibility: hidden;
+}
+
+.button.loading {
+	--btn-color: transparent;
+}
+
+.absolute {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	aspect-ratio: 1/1;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: var(--spinner-size);
+	aspect-ratio: 1/1;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0.8;
+	border: 2px solid transparent;
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}

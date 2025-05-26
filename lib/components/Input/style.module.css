@@ -1,0 +1,96 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	
+	border: none;
+	--border-radius: 0.5rem;
+	--btn-border-radius: 0 0.5rem 0.5rem 0;
+	border-radius: var(--border-radius);
+	background-color: white;
+	transition: border-color 0.2s, box-shadow 0.2s;
+	/* переменные для размеров */
+	--padding-inline: 0.5rem;
+	--padding-block: 0.25rem;
+}
+
+/* Когда фокус внутри: весь контейнер подсвечивается */
+.container:focus-within {
+	border-color: #3b82f6; /* blue-500 */
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* .input {
+	all: unset;
+	text-align: start;
+	padding: var(--padding);
+	flex: 1;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #111;
+	background: transparent;
+}
+
+.actionBtn {
+	margin-left: 0.5rem;
+	background: #f0f0f0;
+	border: none;
+
+	border-radius: var(--btn-border-radius);
+	padding: var(--padding);
+	font-size: 0.875rem;
+	cursor: pointer;
+	transition: background 0.2s;
+} */
+
+/* Размеры */
+.sm {
+	--padding-inline: 1rem;
+	--padding-block: 0.25rem;
+	font-size: 0.875rem;
+}
+.md {
+	--padding-inline: 1rem;
+	--padding-block: 0.5rem;
+	font-size: 1rem;
+}
+.lg {
+	--padding-inline: 1rem;
+	--padding-block: 0.75rem;
+	font-size: 1.25rem;
+}
+
+.icon {
+	margin: 0 0.5rem;
+
+	display: flex;
+	align-items: center;
+	color: #888;
+}
+
+/* Инпут и кнопка используют одни и те же паддинги */
+.input {
+	all: unset;
+	text-align: start;
+	padding: var(--padding-block) 0.3rem;
+	flex: 1;
+	font-size: inherit;
+	line-height: 1.5;
+	color: #111;
+	background: transparent;
+}
+
+.actionBtn {
+	margin-left: 0.5rem;
+	background: #f0f0f0;
+	border: none;
+	border-radius: var(--btn-border-radius, 0 0.5rem 0.5rem 0);
+	padding: var(--padding-block) var(--padding-inline);
+	font-size: inherit;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.actionBtn:hover {
+	background: #e0e0e0;
+}
